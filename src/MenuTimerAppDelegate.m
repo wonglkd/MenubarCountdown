@@ -40,10 +40,6 @@
 @synthesize canResume;
 
 
-+ (void)initialize {
-}
-
-
 - (void)dealloc {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
@@ -69,10 +65,6 @@
     [statusItem setHighlightMode:YES];
     [statusItem setToolTip:NSLocalizedString(@"Menubar Countdown",
                                              @"Status Item Tooltip")];
-}
-
-- (void)onMenuShortcutClick:(id)sender {
-    [self startTimer: 5];
 }
 
 
@@ -125,6 +117,7 @@
         }
     }
 }
+
 
 - (IBAction)startTimer:(id)sender {
     NSMenuItem *menuItem = (NSMenuItem*)sender;
