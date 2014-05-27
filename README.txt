@@ -1,4 +1,18 @@
-This is a fork of Menubar Countdown developed by Capable Hands Technologies.
+This is a fork of Menubar Countdown.  It's meant to be an incredibly minimal menu bar timer useful for me; if you want
+more features, you should look at upstream.
+
+It removes:
+- growl notifications
+- audio notifications
+- settable time periods
+- all UI outside of the menu bar
+
+It adds:
+- a small selection of preset time intervals
+- notifications via Notification Center.
+
+
+
 
 Menubar Countdown
 Version 1.2
@@ -22,35 +36,3 @@ GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-
-RELEASE NOTES
-
-v1.2 (2009/06/22)
-
-- New application icon
-
-- Command-X, Command-C, Command-V, and Command-A now work in the text fields in the settings dialog
-
-- Command-R is now a shortcut key for the Restart Countdown... button in the alert window
-
-- Add option to hide seconds in menu bar
-
-- Show start-timer dialog when application launches
-
-- Add Growl notifications.  The Announcement text specified in the Start dialog will be displayed in the Growl notification window.
-
-
-v1.1 (2009/04/20)
-
-- timer-expired alert window floats above other applications' windows
-
-- added application icon
-
-- added Doxygen comments to source code
-
-
-v1.0 (2009/04/09)
-
-- initial release
-

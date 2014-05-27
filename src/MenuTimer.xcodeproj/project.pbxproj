@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
-		4E5848A60F8050030001EFEB /* StartTimerDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5848A40F8050030001EFEB /* StartTimerDialog.xib */; };
 		4E753AA90F8E3A67007B2C05 /* MenuTimerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4E753AA80F8E3A67007B2C05 /* MenuTimerIcon.icns */; };
-		4EAF35AD0F87EFD400F8CCCB /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF35AC0F87EFD400F8CCCB /* UserDefaults.m */; };
 		4EBC344C0F7D010100AE610D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC344A0F7D010100AE610D /* Credits.rtf */; };
 		4EC45D240F7324A900952786 /* MenuTimerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */; };
-		4EC578F90F7FE2EB0000D737 /* StartTimerDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC578F80F7FE2EB0000D737 /* StartTimerDialogController.m */; };
-		4EE7B25D0F83D3AC004F66B8 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7B25B0F83D3AC004F66B8 /* UserDefaults.plist */; };
 		4EFE68D10F7C515A00251776 /* Stopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE68D00F7C515A00251776 /* Stopwatch.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -42,16 +38,10 @@
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* MenuTimer_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTimer_Prefix.pch; sourceTree = "<group>"; };
-		4E5848A50F8050030001EFEB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StartTimerDialog.xib; sourceTree = "<group>"; };
 		4E753AA80F8E3A67007B2C05 /* MenuTimerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MenuTimerIcon.icns; sourceTree = "<group>"; };
-		4EAF35AB0F87EFD400F8CCCB /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
-		4EAF35AC0F87EFD400F8CCCB /* UserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDefaults.m; sourceTree = "<group>"; };
 		4EBC344B0F7D010100AE610D /* English */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = English; path = English.lproj/Credits.rtf; sourceTree = "<group>"; };
 		4EC45D220F7324A900952786 /* MenuTimerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTimerAppDelegate.h; sourceTree = "<group>"; };
 		4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTimerAppDelegate.m; sourceTree = "<group>"; };
-		4EC578F70F7FE2EB0000D737 /* StartTimerDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTimerDialogController.h; sourceTree = "<group>"; };
-		4EC578F80F7FE2EB0000D737 /* StartTimerDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTimerDialogController.m; sourceTree = "<group>"; };
-		4EE7B25C0F83D3AC004F66B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = English; path = English.lproj/UserDefaults.plist; sourceTree = "<group>"; };
 		4EFE68CF0F7C515A00251776 /* Stopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stopwatch.h; sourceTree = "<group>"; };
 		4EFE68D00F7C515A00251776 /* Stopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stopwatch.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,12 +65,8 @@
 			children = (
 				4EC45D220F7324A900952786 /* MenuTimerAppDelegate.h */,
 				4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */,
-				4EC578F70F7FE2EB0000D737 /* StartTimerDialogController.h */,
-				4EC578F80F7FE2EB0000D737 /* StartTimerDialogController.m */,
 				4EFE68CF0F7C515A00251776 /* Stopwatch.h */,
 				4EFE68D00F7C515A00251776 /* Stopwatch.m */,
-				4EAF35AB0F87EFD400F8CCCB /* UserDefaults.h */,
-				4EAF35AC0F87EFD400F8CCCB /* UserDefaults.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -140,8 +126,6 @@
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
 				1DDD58140DA1D0A300B32029 /* MainMenu.xib */,
 				4E753AA80F8E3A67007B2C05 /* MenuTimerIcon.icns */,
-				4E5848A40F8050030001EFEB /* StartTimerDialog.xib */,
-				4EE7B25B0F83D3AC004F66B8 /* UserDefaults.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -209,8 +193,6 @@
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
 				1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */,
 				4EBC344C0F7D010100AE610D /* Credits.rtf in Resources */,
-				4E5848A60F8050030001EFEB /* StartTimerDialog.xib in Resources */,
-				4EE7B25D0F83D3AC004F66B8 /* UserDefaults.plist in Resources */,
 				4E753AA90F8E3A67007B2C05 /* MenuTimerIcon.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,8 +207,6 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				4EC45D240F7324A900952786 /* MenuTimerAppDelegate.m in Sources */,
 				4EFE68D10F7C515A00251776 /* Stopwatch.m in Sources */,
-				4EC578F90F7FE2EB0000D737 /* StartTimerDialogController.m in Sources */,
-				4EAF35AD0F87EFD400F8CCCB /* UserDefaults.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,28 +229,12 @@
 			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
-		4E5848A40F8050030001EFEB /* StartTimerDialog.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4E5848A50F8050030001EFEB /* English */,
-			);
-			name = StartTimerDialog.xib;
-			sourceTree = "<group>";
-		};
 		4EBC344A0F7D010100AE610D /* Credits.rtf */ = {
 			isa = PBXVariantGroup;
 			children = (
 				4EBC344B0F7D010100AE610D /* English */,
 			);
 			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		4EE7B25B0F83D3AC004F66B8 /* UserDefaults.plist */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4EE7B25C0F83D3AC004F66B8 /* English */,
-			);
-			name = UserDefaults.plist;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

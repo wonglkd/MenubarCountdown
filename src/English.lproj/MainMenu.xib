@@ -15,12 +15,6 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu title="00:00:00" id="450">
             <items>
-                <menuItem title="Start…" toolTip="Start a countdown" id="451">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="startTimer:" target="458" id="463"/>
-                    </connections>
-                </menuItem>
                 <menuItem title="Resume" enabled="NO" toolTip="Resume a stopped countdown" id="465">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
@@ -28,7 +22,7 @@
                         <binding destination="458" name="enabled" keyPath="canResume" id="474"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Stop" toolTip="Stop the countdown" id="452">
+                <menuItem title="Pause" toolTip="Stop the countdown" id="452">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="stopTimer:" target="458" id="460"/>

@@ -51,19 +51,11 @@
 /// This property is bound to the Resume menu item's Enabled property
 @property (nonatomic) BOOL canResume;
 
-/// \brief Start the timer
-///
-/// Displays the StartTimerDialogController's window
-- (IBAction)startTimer:(id)sender;
-
-/// \brief Stop the timer
-- (IBAction)stopTimer:(id)sender;
+/// \brief Pause the timer
+- (IBAction)pauseTimer:(id)sender;
 
 /// \brief Resume the timer
 - (IBAction)resumeTimer:(id)sender;
-
-/// \brief Invoked when the Start button on the StartTimerDialogController's window is clicked
-- (IBAction)startTimerDialogStartButtonWasClicked:(id)sender;
 
 /// \brief Invoked when the "Restart Countdown..." button is clicked
 - (IBAction)restartCountdownWasClicked:(id)sender;

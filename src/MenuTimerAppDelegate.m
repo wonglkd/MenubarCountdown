@@ -23,12 +23,9 @@
 
 #import "MenuTimerAppDelegate.h"
 #import "Stopwatch.h"
-#import "StartTimerDialogController.h"
-#import "UserDefaults.h"
 
 
 @interface MenuTimerAppDelegate (private)
-+ (void)setupUserDefaults;
 - (void)nextSecondTimerDidFire:(NSTimer*)timer;
 - (void)updateStatusItemTitle:(int)timeRemaining;
 - (void)timerDidExpire;
@@ -47,7 +44,6 @@
 
 
 + (void)initialize {
-    [UserDefaults registerDefaults];
 }
 
 
@@ -55,7 +51,6 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
 
-    [startTimerDialogController release];
     [stopwatch release];
     [statusItem release];
     [menu release];
@@ -77,12 +72,6 @@
     [statusItem setHighlightMode:YES];
     [statusItem setToolTip:NSLocalizedString(@"Menubar Countdown",
                                              @"Status Item Tooltip")];
-
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    if ([defaults boolForKey:UserDefaultsShowStartDialogOnLaunchKey]) {
-        [self startTimer:self];
-    }
     
     
     // render the dynamic menu
@@ -132,35 +121,16 @@
 
 
 - (void)updateStatusItemTitle:(int)timeRemaining {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    bool showSeconds = [defaults boolForKey:UserDefaultsShowSeconds];
-
-    [statusItem setTitle:[self timeToString:timeRemaining showSeconds:showSeconds]];
+    [statusItem setTitle:[self timeToString:timeRemaining]];
 }
 
-- (NSString *)timeToString:(int)time
-         showSeconds:(BOOL)showSeconds {
-    if (!showSeconds) {
-        // Round timeRemaining up to the next minute
-        double minutes = (double)time / 60.0;
-        time = (int)ceil(minutes) * 60;
-    }
-    
-    int hours = time / 3600;
-    time %= 3600;
+- (NSString *)timeToString:(int)time {
+    // TODO: can only handle up to 99 minutes
     int minutes = time / 60;
     int seconds = time % 60;
     
-    // TODO: Use localized time-formatting function
-    NSString* timeString;
-    if (showSeconds) {
-        timeString = [NSString stringWithFormat:@"%02d:%02d:%02d",
-                      hours, minutes, seconds];
-    }
-    else {
-        timeString = [NSString stringWithFormat:@"%02d:%02d",
-                      hours, minutes];
-    }
+    NSString* timeString = [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+
     return timeString;
 }
 
@@ -232,7 +202,7 @@
 }
 
 
-- (IBAction)stopTimer:(id)sender {
+- (IBAction)pauseTimer:(id)sender {
     self.timerIsRunning = NO;
     if (secondsRemaining > 0) {
         self.canResume = YES;
@@ -264,13 +234,6 @@
     NSSpeechSynthesizer *synth = [[NSSpeechSynthesizer alloc] initWithVoice:nil];
     [synth startSpeakingString:[self announcementText]];
     [synth release];
-}
-
-
-- (NSString *)announcementText {
-    NSString *result = NSLocalizedString(@"The Menubar Countdown timer has reached zero.",
-                                         @"Default announcement text");
-    return result;
 }
 
 
