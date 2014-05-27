@@ -265,14 +265,6 @@
     [self updateStatusItemTitle:0];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    if ([defaults boolForKey:UserDefaultsAnnounceExpirationKey]) {
-        [self announceTimerExpired];
-    }
-
-    if ([defaults boolForKey:UserDefaultsShowAlertWindowOnExpirationKey]) {
-        [self showTimerExpiredAlert];
-    }
 }
 
 
@@ -284,11 +276,8 @@
 
 
 - (NSString *)announcementText {
-    NSString *result = [[NSUserDefaults standardUserDefaults] stringForKey:UserDefaultsAnnouncementTextKey];
-    if ([result length] < 1) {
-        result = NSLocalizedString(@"The Menubar Countdown timer has reached zero.",
-                                   @"Default announcement text");
-    }
+    NSString *result = NSLocalizedString(@"The Menubar Countdown timer has reached zero.",
+                                         @"Default announcement text");
     return result;
 }
 
