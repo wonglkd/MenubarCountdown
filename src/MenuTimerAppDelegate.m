@@ -160,6 +160,7 @@
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     [notification setTitle:@"MenuTimer"];
     [notification setInformativeText:@"Time's up!"];
+    [notification setHasActionButton:NO];
     [notification setSoundName:NSUserNotificationDefaultSoundName];
 
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
