@@ -42,6 +42,12 @@
                         <action selector="startTimer:" target="458" id="blK-6I-Uaj"/>
                     </connections>
                 </menuItem>
+                <menuItem title="00:10" toolTip="Stop the countdown" id="ije-bG-jVx">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startTimer:" target="458" id="zZE-aW-whv"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="485"/>
                 <menuItem title="Quit MenuTimer" toolTip="Terminate the Menubar Countdown application" id="453">
                     <modifierMask key="keyEquivalentModifierMask"/>

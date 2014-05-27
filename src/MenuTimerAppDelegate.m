@@ -163,6 +163,13 @@
     self.canResume = NO;
     self.timerIsRunning = NO;
     [self updateStatusItemTitle:0];
+
+    NSUserNotification *notification = [[NSUserNotification alloc] init];
+    [notification setTitle:@"MenuTimer"];
+    [notification setInformativeText:@"Time's up!"];
+    [notification setSoundName:NSUserNotificationDefaultSoundName];
+
+    [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
 }
 
 @end
