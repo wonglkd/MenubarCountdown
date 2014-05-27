@@ -25,7 +25,6 @@
 
 @class Stopwatch;
 @class StartTimerDialogController;
-@class TimerExpiredAlertController;
 
 /// \brief Application delegate
 @interface MenuTimerAppDelegate : NSObject {
@@ -40,7 +39,6 @@
     IBOutlet NSMenu *menu;                                             ///< Outlet for main menu
     IBOutlet Stopwatch *stopwatch;                                     ///< Outlet for Stopwatch
     IBOutlet StartTimerDialogController *startTimerDialogController;   ///< Outlet for StartTimerDialogController
-    IBOutlet TimerExpiredAlertController *timerExpiredAlertController; ///< Outlet for TimerExpiredAlertController
 }
 
 /// \brief Indicates whether the timer is running
@@ -69,9 +67,6 @@
 
 /// \brief Invoked when the Start button on the StartTimerDialogController's window is clicked
 - (IBAction)startTimerDialogStartButtonWasClicked:(id)sender;
-
-/// \brief Invoked when OK button is clicked in timer-expired alert window
-- (IBAction)dismissTimerExpiredAlert:(id)sender;
 
 /// \brief Invoked when the "Restart Countdown..." button is clicked
 - (IBAction)restartCountdownWasClicked:(id)sender;

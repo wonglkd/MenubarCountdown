@@ -22,7 +22,6 @@
  */
 
 #include "Stopwatch.h"
-#include <CoreServices/CoreServices.h>
 #include <mach/mach_time.h>
 
 
@@ -43,11 +42,17 @@
 - (uint64_t)elapsedNanoseconds {
     // See http://developer.apple.com/qa/qa2004/qa1398.html for details about this code
 
+    static mach_timebase_info_data_t sTimebaseInfo;
+
+    if ( sTimebaseInfo.denom == 0 ) {
+        (void) mach_timebase_info(&sTimebaseInfo);
+    }
+
     const uint64_t now = mach_absolute_time();
     const uint64_t elapsed = now - startTime;
 
-    Nanoseconds elapsedNano = AbsoluteToNanoseconds(*(AbsoluteTime *)&elapsed);
-    return *(uint64_t *)&elapsedNano;
+    const uint64_t elapsedNano = elapsed * sTimebaseInfo.numer / sTimebaseInfo.denom;
+    return elapsedNano;
 }
 
 

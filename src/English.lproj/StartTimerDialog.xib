@@ -168,19 +168,6 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField toolTip="This text will be spoken if &quot;Speak announcement&quot; is checked, and will be included in Growl notifications." verticalHuggingPriority="750" id="97" userLabel="AnnouncementText" customClass="TextField">
-                        <rect key="frame" x="19" y="103" width="293" height="65"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="The Menubar Countdown timer has reached zero." drawsBackground="YES" id="98">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                        <connections>
-                            <binding destination="54" name="value" keyPath="values.AnnouncementText" id="157"/>
-                            <outlet property="nextKeyView" destination="143" id="146"/>
-                        </connections>
-                    </textField>
                     <button toolTip="If checked, this window will be shown whenever Menubar Countdown is launched" id="137" userLabel="ShowStartDialogOnLaunch">
                         <rect key="frame" x="17" y="59" width="297" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -235,15 +222,6 @@ DQ
                             <outlet property="nextKeyView" destination="137" id="145"/>
                         </connections>
                     </button>
-                    <textField verticalHuggingPriority="750" id="149">
-                        <rect key="frame" x="18" y="176" width="136" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Announcement Text:" id="150">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                 </subviews>
                 <connections>
                     <outlet property="nextKeyView" destination="22" id="68"/>

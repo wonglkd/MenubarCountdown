@@ -24,7 +24,6 @@
 #import "MenuTimerAppDelegate.h"
 #import "Stopwatch.h"
 #import "StartTimerDialogController.h"
-#import "TimerExpiredAlertController.h"
 #import "UserDefaults.h"
 
 
@@ -35,7 +34,6 @@
 - (void)timerDidExpire;
 - (void)announceTimerExpired;
 - (NSString*)announcementText;
-- (void)showTimerExpiredAlert;
 - (void)removeOldIntervals:(NSArray*)oldIntervals renderNew:(NSArray*)newIntervals;
 - (void)reallyStartTimer:(int)seconds;
 - (NSString *)timeToString:(int)time showSeconds:(BOOL)showSeconds;
@@ -57,7 +55,6 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
 
-    [timerExpiredAlertController release];
     [startTimerDialogController release];
     [stopwatch release];
     [statusItem release];
@@ -195,8 +192,6 @@
 
 
 - (IBAction)startTimer:(id)sender {
-    [self dismissTimerExpiredAlert:sender];
-
     if (!startTimerDialogController) {
         [NSBundle loadNibNamed:@"StartTimerDialog" owner:self];
     }
@@ -205,7 +200,6 @@
 
 
 - (IBAction)startTimerDialogStartButtonWasClicked:(id)sender {
-    [self dismissTimerExpiredAlert:sender];
 
     [startTimerDialogController dismissDialog:sender];
     
@@ -263,8 +257,6 @@
     self.canResume = NO;
     self.timerIsRunning = NO;
     [self updateStatusItemTitle:0];
-
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 }
 
 
@@ -281,24 +273,8 @@
     return result;
 }
 
-    
-- (void)showTimerExpiredAlert {
-    [NSApp activateIgnoringOtherApps:YES];
-
-    if (!timerExpiredAlertController) {
-        [NSBundle loadNibNamed:@"TimerExpiredAlert" owner:self];
-    }
-    [timerExpiredAlertController showAlert];
-}
-
-
-- (IBAction)dismissTimerExpiredAlert:(id)sender {
-    [timerExpiredAlertController close];
-}
-
 
 - (IBAction)restartCountdownWasClicked:(id)sender {
-    [self dismissTimerExpiredAlert:sender];
     [self startTimer:sender];
 }
 
