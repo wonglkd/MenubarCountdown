@@ -36,19 +36,6 @@ NSString *UserDefaultsRecentTimerIntervals = @"RecentTimerIntervals";
 @implementation UserDefaults
 
 + (void)registerDefaults {
-    /*
-    NSDictionary * allObjects;
-    NSString     * key;
-    
-    allObjects = [ [ NSUserDefaults standardUserDefaults ] dictionaryRepresentation ];
-    
-    for( key in allObjects )
-    {
-        [ [ NSUserDefaults standardUserDefaults ] removeObjectForKey: key ];
-    }
-    
-    [ [ NSUserDefaults standardUserDefaults ] synchronize ];
-    */
     
     NSLog(@"UserDefaults registerDefaults");
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"UserDefaults"

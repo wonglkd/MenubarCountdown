@@ -15,18 +15,18 @@
         <window title="Menubar Countdown Settings" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="1">
             <windowStyleMask key="styleMask" titled="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="541" y="362" width="333" height="318"/>
+            <rect key="contentRect" x="541" y="362" width="393" height="409"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="0.0" width="333" height="318"/>
+                <rect key="frame" x="0.0" y="0.0" width="393" height="409"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <userGuides>
-                    <userLayoutGuide location="357.5" affinity="minY"/>
+                    <userLayoutGuide location="357" affinity="minY"/>
                     <userLayoutGuide location="357.5" affinity="minY"/>
                 </userGuides>
                 <subviews>
                     <textField verticalHuggingPriority="750" id="20">
-                        <rect key="frame" x="17" y="271" width="89" height="17"/>
+                        <rect key="frame" x="17" y="362" width="89" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Countdown:" id="21">
                             <font key="font" metaFont="system"/>
@@ -35,7 +35,7 @@
                         </textFieldCell>
                     </textField>
                     <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="83" userLabel="CountdownGroup">
-                        <rect key="frame" x="108" y="233" width="208" height="67"/>
+                        <rect key="frame" x="108" y="324" width="208" height="67"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <view key="contentView">
                             <rect key="frame" x="1" y="1" width="206" height="65"/>
@@ -159,17 +159,8 @@
                         <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
                         <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </box>
-                    <textField verticalHuggingPriority="750" id="87">
-                        <rect key="frame" x="17" y="201" width="299" height="17"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="When countdown timer reaches 00:00:00:" id="88">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                        </textFieldCell>
-                    </textField>
                     <button toolTip="If checked, this window will be shown whenever Menubar Countdown is launched" id="137" userLabel="ShowStartDialogOnLaunch">
-                        <rect key="frame" x="17" y="59" width="297" height="18"/>
+                        <rect key="frame" x="17" y="83" width="297" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Show this window when application starts" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="138">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -181,7 +172,7 @@
                         </connections>
                     </button>
                     <button toolTip="Close this window" verticalHuggingPriority="750" id="13" userLabel="CancelButton">
-                        <rect key="frame" x="127" y="13" width="96" height="32"/>
+                        <rect key="frame" x="127" y="37" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="14">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -196,7 +187,7 @@ Gw
                         </connections>
                     </button>
                     <button toolTip="Start the countdown" verticalHuggingPriority="750" id="11" userLabel="StartButton">
-                        <rect key="frame" x="223" y="13" width="96" height="32"/>
+                        <rect key="frame" x="223" y="37" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                         <buttonCell key="cell" type="push" title="Start" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="12">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -211,7 +202,7 @@ DQ
                         </connections>
                     </button>
                     <button toolTip="If checked, seconds will be included in the menu bar display. If unchecked, only hours and minutes are displayed." id="143">
-                        <rect key="frame" x="18" y="79" width="297" height="18"/>
+                        <rect key="frame" x="18" y="103" width="297" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="check" title="Show seconds in menu bar" bezelStyle="regularSquare" imagePosition="left" alignment="left" state="on" inset="2" id="144">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
@@ -222,6 +213,71 @@ DQ
                             <outlet property="nextKeyView" destination="137" id="145"/>
                         </connections>
                     </button>
+                    <customView id="BaA-se-Umw" userLabel="AddRemoveBoxGroup">
+                        <rect key="frame" x="42" y="127" width="309" height="201"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" id="nHM-WY-LKV">
+                                <rect key="frame" x="20" y="37" width="269" height="144"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <clipView key="contentView" id="Ex0-cs-B2U">
+                                    <rect key="frame" x="1" y="17" width="267" height="126"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" headerView="BO4-bx-ho3" id="atd-kQ-mCI">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="126"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <size key="intercellSpacing" width="3" height="2"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
+                                            <tableColumns>
+                                                <tableColumn width="264" minWidth="40" maxWidth="1000" id="7fh-6b-BnV">
+                                                    <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
+                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" white="0.33333298560000002" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </tableHeaderCell>
+                                                    <textFieldCell key="dataCell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" alignment="left" title="Text Cell" id="eCM-wL-36X">
+                                                        <font key="font" metaFont="system"/>
+                                                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                    <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
+                                                </tableColumn>
+                                            </tableColumns>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="UBO-d1-o0w">
+                                    <rect key="frame" x="1" y="119" width="223" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="EH5-T2-pRh">
+                                    <rect key="frame" x="224" y="17" width="15" height="102"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <tableHeaderView key="headerView" id="BO4-bx-ho3">
+                                    <rect key="frame" x="0.0" y="0.0" width="267" height="17"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableHeaderView>
+                            </scrollView>
+                            <segmentedControl verticalHuggingPriority="750" id="hjX-kQ-jgQ">
+                                <rect key="frame" x="20" y="19" width="269" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <segmentedCell key="cell" alignment="left" style="smallSquare" trackingMode="selectOne" id="mfm-15-aAp">
+                                    <font key="font" metaFont="system"/>
+                                    <segments>
+                                        <segment image="NSAddTemplate" imageScaling="none"/>
+                                        <segment image="NSRemoveTemplate" imageScaling="none" tag="1"/>
+                                        <segment width="217" enabled="NO">
+                                            <nil key="label"/>
+                                        </segment>
+                                    </segments>
+                                </segmentedCell>
+                            </segmentedControl>
+                        </subviews>
+                    </customView>
                 </subviews>
                 <connections>
                     <outlet property="nextKeyView" destination="22" id="68"/>
@@ -253,4 +309,8 @@ DQ
         </numberFormatter>
         <userDefaultsController representsSharedInstance="YES" id="54"/>
     </objects>
+    <resources>
+        <image name="NSAddTemplate" width="8" height="8"/>
+        <image name="NSRemoveTemplate" width="8" height="8"/>
+    </resources>
 </document>
