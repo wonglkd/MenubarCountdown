@@ -24,7 +24,6 @@
 #import <Cocoa/Cocoa.h>
 
 @class Stopwatch;
-@class StartTimerDialogController;
 
 /// \brief Application delegate
 @interface MenuTimerAppDelegate : NSObject {
@@ -38,7 +37,6 @@
 
     IBOutlet NSMenu *menu;                                             ///< Outlet for main menu
     IBOutlet Stopwatch *stopwatch;                                     ///< Outlet for Stopwatch
-    IBOutlet StartTimerDialogController *startTimerDialogController;   ///< Outlet for StartTimerDialogController
 }
 
 /// \brief Indicates whether the timer is running
@@ -57,7 +55,7 @@
 /// \brief Resume the timer
 - (IBAction)resumeTimer:(id)sender;
 
-/// \brief Invoked when the "Restart Countdown..." button is clicked
-- (IBAction)restartCountdownWasClicked:(id)sender;
+/// \brief Resume the timer
+- (IBAction)startTimer:(id)sender;
 
 @end
