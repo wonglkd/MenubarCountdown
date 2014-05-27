@@ -51,9 +51,6 @@
 /// This property is bound to the Resume menu item's Enabled property
 @property (nonatomic) BOOL canResume;
 
-/// \brief Handle the "About..." menu item
-- (IBAction)showAboutPanel:(id)sender;
-
 /// \brief Start the timer
 ///
 /// Displays the StartTimerDialogController's window

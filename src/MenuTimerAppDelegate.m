@@ -279,10 +279,4 @@
 }
 
 
-- (IBAction)showAboutPanel:(id)sender {
-    [NSApp activateIgnoringOtherApps:YES];
-    [NSApp orderFrontStandardAboutPanel:sender];
-}
-
-
 @end
