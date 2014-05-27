@@ -26,8 +26,6 @@
 #import "StartTimerDialogController.h"
 #import "TimerExpiredAlertController.h"
 #import "UserDefaults.h"
-#import <AudioToolbox/AudioServices.h>
-#import "GrowlHandler.h"
 
 
 @interface MenuTimerAppDelegate (private)
@@ -59,7 +57,6 @@
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
 
-    [growl release];
     [timerExpiredAlertController release];
     [startTimerDialogController release];
     [stopwatch release];
@@ -84,13 +81,6 @@
     [statusItem setToolTip:NSLocalizedString(@"Menubar Countdown",
                                              @"Status Item Tooltip")];
 
-    // Call startTimer: whenever Growl notification is clicked
-    NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
-    [nc addObserver:self
-           selector:@selector(startTimer:)
-               name:GrowlHandlerTimerExpiredNotificationWasClicked
-             object:nil];
-    [growl connectToGrowl];
 
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if ([defaults boolForKey:UserDefaultsShowStartDialogOnLaunchKey]) {
@@ -274,13 +264,7 @@
     self.timerIsRunning = NO;
     [self updateStatusItemTitle:0];
 
-    [growl notifyTimerExpired:[self announcementText]];
-
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-
-    if ([defaults boolForKey:UserDefaultsPlayAlertSoundOnExpirationKey]) {
-        AudioServicesPlayAlertSound(kUserPreferredAlert);
-    }
 
     if ([defaults boolForKey:UserDefaultsAnnounceExpirationKey]) {
         [self announceTimerExpired];

@@ -10,9 +10,6 @@
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		4E04D6750F9D476A006023D1 /* TimerExpiredAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E04D6740F9D476A006023D1 /* TimerExpiredAlertController.m */; };
 		4E04D6B90F9D5E2F006023D1 /* TimerExpiredAlert.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E04D6B70F9D5E2F006023D1 /* TimerExpiredAlert.xib */; };
-		4E255A400FD9FD9F0025F48C /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E255A3F0FD9FD9F0025F48C /* Growl.framework */; };
-		4E255A450FD9FDC60025F48C /* GrowlHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E255A440FD9FDC60025F48C /* GrowlHandler.m */; };
-		4E255A660FD9FF3A0025F48C /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4E255A3F0FD9FD9F0025F48C /* Growl.framework */; };
 		4E5848A60F8050030001EFEB /* StartTimerDialog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5848A40F8050030001EFEB /* StartTimerDialog.xib */; };
 		4E753AA90F8E3A67007B2C05 /* MenuTimerIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 4E753AA80F8E3A67007B2C05 /* MenuTimerIcon.icns */; };
 		4EAF35AD0F87EFD400F8CCCB /* UserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF35AC0F87EFD400F8CCCB /* UserDefaults.m */; };
@@ -20,7 +17,6 @@
 		4EC281870FE0CE03008B70D5 /* TextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC281860FE0CE03008B70D5 /* TextField.m */; };
 		4EC45D240F7324A900952786 /* MenuTimerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */; };
 		4EC578F90F7FE2EB0000D737 /* StartTimerDialogController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC578F80F7FE2EB0000D737 /* StartTimerDialogController.m */; };
-		4EDFF4450F82D3F5002ACE13 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDFF4440F82D3F5002ACE13 /* AudioToolbox.framework */; };
 		4EE7B25D0F83D3AC004F66B8 /* UserDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4EE7B25B0F83D3AC004F66B8 /* UserDefaults.plist */; };
 		4EFE68D10F7C515A00251776 /* Stopwatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFE68D00F7C515A00251776 /* Stopwatch.m */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
@@ -35,7 +31,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				4E255A660FD9FF3A0025F48C /* Growl.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,9 +48,6 @@
 		4E04D6730F9D476A006023D1 /* TimerExpiredAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimerExpiredAlertController.h; sourceTree = "<group>"; };
 		4E04D6740F9D476A006023D1 /* TimerExpiredAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerExpiredAlertController.m; sourceTree = "<group>"; };
 		4E04D6B80F9D5E2F006023D1 /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/TimerExpiredAlert.xib; sourceTree = "<group>"; };
-		4E255A3F0FD9FD9F0025F48C /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
-		4E255A430FD9FDC60025F48C /* GrowlHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlHandler.h; sourceTree = "<group>"; };
-		4E255A440FD9FDC60025F48C /* GrowlHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlHandler.m; sourceTree = "<group>"; };
 		4E5848A50F8050030001EFEB /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/StartTimerDialog.xib; sourceTree = "<group>"; };
 		4E753AA80F8E3A67007B2C05 /* MenuTimerIcon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = MenuTimerIcon.icns; sourceTree = "<group>"; };
 		4EAF35AB0F87EFD400F8CCCB /* UserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDefaults.h; sourceTree = "<group>"; };
@@ -67,7 +59,6 @@
 		4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTimerAppDelegate.m; sourceTree = "<group>"; };
 		4EC578F70F7FE2EB0000D737 /* StartTimerDialogController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartTimerDialogController.h; sourceTree = "<group>"; };
 		4EC578F80F7FE2EB0000D737 /* StartTimerDialogController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartTimerDialogController.m; sourceTree = "<group>"; };
-		4EDFF4440F82D3F5002ACE13 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = ../../../System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4EE7B25C0F83D3AC004F66B8 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = English; path = English.lproj/UserDefaults.plist; sourceTree = "<group>"; };
 		4EFE68CF0F7C515A00251776 /* Stopwatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stopwatch.h; sourceTree = "<group>"; };
 		4EFE68D00F7C515A00251776 /* Stopwatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stopwatch.m; sourceTree = "<group>"; };
@@ -81,8 +72,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
-				4EDFF4450F82D3F5002ACE13 /* AudioToolbox.framework in Frameworks */,
-				4E255A400FD9FD9F0025F48C /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,8 +81,6 @@
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				4E255A430FD9FDC60025F48C /* GrowlHandler.h */,
-				4E255A440FD9FDC60025F48C /* GrowlHandler.m */,
 				4EC45D220F7324A900952786 /* MenuTimerAppDelegate.h */,
 				4EC45D230F7324A900952786 /* MenuTimerAppDelegate.m */,
 				4EC578F70F7FE2EB0000D737 /* StartTimerDialogController.h */,
@@ -121,7 +108,6 @@
 		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4EDFF4440F82D3F5002ACE13 /* AudioToolbox.framework */,
 				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
 				13E42FB307B3F0F600E4EEF1 /* CoreData.framework */,
 				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
@@ -176,7 +162,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4E255A3F0FD9FD9F0025F48C /* Growl.framework */,
 				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
 				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
 			);
@@ -211,7 +196,7 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0410;
+				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MenuTimer" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -257,7 +242,6 @@
 				4EC578F90F7FE2EB0000D737 /* StartTimerDialogController.m in Sources */,
 				4EAF35AD0F87EFD400F8CCCB /* UserDefaults.m in Sources */,
 				4E04D6750F9D476A006023D1 /* TimerExpiredAlertController.m in Sources */,
-				4E255A450FD9FDC60025F48C /* GrowlHandler.m in Sources */,
 				4EC281870FE0CE03008B70D5 /* TextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +304,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,6 +327,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -361,7 +347,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -374,7 +359,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;

@@ -26,7 +26,6 @@
 @class Stopwatch;
 @class StartTimerDialogController;
 @class TimerExpiredAlertController;
-@class GrowlHandler;
 
 /// \brief Application delegate
 @interface MenuTimerAppDelegate : NSObject {
@@ -42,7 +41,6 @@
     IBOutlet Stopwatch *stopwatch;                                     ///< Outlet for Stopwatch
     IBOutlet StartTimerDialogController *startTimerDialogController;   ///< Outlet for StartTimerDialogController
     IBOutlet TimerExpiredAlertController *timerExpiredAlertController; ///< Outlet for TimerExpiredAlertController
-    IBOutlet GrowlHandler *growl;                                      ///< Outlet for GrowlHandler
 }
 
 /// \brief Indicates whether the timer is running
