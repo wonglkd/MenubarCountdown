@@ -1,5 +1,5 @@
-This is a fork of Menubar Countdown.  It's meant to be an incredibly minimal menu bar timer useful for me; if you want
-more features, you should look at upstream.
+This is a fork of Menubar Countdown.  It's meant to be an incredibly minimal 
+menu bar timer useful for me; if you want more features, you should go upstream.
 
 It removes:
 - growl notifications
