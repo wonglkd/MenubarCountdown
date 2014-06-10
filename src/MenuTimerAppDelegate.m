@@ -40,6 +40,7 @@
 @synthesize canResume;
 
 
+// TODO: reset the timer when computer resumes from sleep (http://stackoverflow.com/questions/9521092/use-nsworkspacedidwakenotification-to-activate-method)
 - (void)dealloc {
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
     [nc removeObserver:self];
@@ -164,6 +165,8 @@
     [notification setSoundName:NSUserNotificationDefaultSoundName];
 
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
+
+    [notification dealloc];
 }
 
 @end
