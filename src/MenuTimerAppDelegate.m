@@ -38,6 +38,7 @@
 
 @synthesize timerIsRunning;
 @synthesize canResume;
+@synthesize timerIsUp;
 
 
 // TODO: reset the timer when computer resumes from sleep (http://stackoverflow.com/questions/9521092/use-nsworkspacedidwakenotification-to-activate-method)
@@ -75,17 +76,22 @@
 
 - (NSString *)timeToString:(int)time {
     // TODO: can only handle up to 99 minutes
+    NSString* prefix = @"";
+    if (time < 0) {
+        time = -time;
+        prefix = @"-";
+    }
     int minutes = time / 60;
     int seconds = time % 60;
-    
-    NSString* timeString = [NSString stringWithFormat:@"%02d:%02d", minutes, seconds];
+
+    NSString* timeString = [NSString stringWithFormat:@"%@%d:%02d", prefix, minutes, seconds];
 
     return timeString;
 }
 
 - (int)stringToTime:(NSString *)timeString {
     // TODO: fix hacky array indexing that relies on menu text
-    
+
     NSArray *timeArray = [timeString componentsSeparatedByString:@":"];
     int minutes = [timeArray[0] intValue];
     int seconds = [timeArray[1] intValue];
@@ -109,23 +115,22 @@
 - (void)nextSecondTimerDidFire:(NSTimer*)timer {
     if (self.timerIsRunning) {
         secondsRemaining = nearbyint(timerSettingSeconds - [stopwatch elapsedTimeInterval]);
-        if (secondsRemaining <= 0) {
+        if (secondsRemaining <= 0 && !self.timerIsUp) {
             [self timerDidExpire];
         }
-        else {
-            [self updateStatusItemTitle:secondsRemaining];
-            [self waitForNextSecond];
-        }
+        [self updateStatusItemTitle:secondsRemaining];
+        [self waitForNextSecond];
     }
 }
 
 
 - (IBAction)startTimer:(id)sender {
     NSMenuItem *menuItem = (NSMenuItem*)sender;
-    
+
     timerSettingSeconds = [self stringToTime:[menuItem title]];
     self.timerIsRunning = YES;
     self.canResume = NO;
+    self.timerIsUp = NO;
     [stopwatch reset];
     [self updateStatusItemTitle:timerSettingSeconds];
     [self waitForNextSecond];
@@ -154,8 +159,7 @@
 
 
 - (void)timerDidExpire {
-    self.canResume = NO;
-    self.timerIsRunning = NO;
+    self.timerIsUp = YES;
     [self updateStatusItemTitle:0];
 
     NSUserNotification *notification = [[NSUserNotification alloc] init];

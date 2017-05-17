@@ -32,6 +32,7 @@
 
     BOOL timerIsRunning;       ///< Instance variable for \c timerIsRunning property
     BOOL canResume;            ///< Instance variable for \c canResume property
+    BOOL timerIsUp;            ///< Instance variable for \c timerIsUp property
 
     NSStatusItem *statusItem;  ///< Reference to NSStatusItem
 
@@ -48,6 +49,9 @@
 ///
 /// This property is bound to the Resume menu item's Enabled property
 @property (nonatomic) BOOL canResume;
+
+/// \brief Indicates whether the timer is counting upwards
+@property (nonatomic) BOOL timerIsUp;
 
 /// \brief Pause the timer
 - (IBAction)pauseTimer:(id)sender;
