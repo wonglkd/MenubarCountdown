@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
@@ -29,6 +29,13 @@
                         <binding destination="458" name="enabled" keyPath="canResume" id="474"/>
                     </connections>
                 </menuItem>
+                <menuItem title="Reset" enabled="NO" toolTip="Reset to zero" id="43J-nr-ZCy">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="resetTimer:" target="458" id="9fY-Fi-ws3"/>
+                        <binding destination="458" name="enabled" keyPath="timerIsRunning" id="9n1-EK-V0r"/>
+                    </connections>
+                </menuItem>
                 <menuItem isSeparatorItem="YES" id="464"/>
                 <menuItem title="25:00" toolTip="Stop the countdown" id="yqr-AH-2md">
                     <modifierMask key="keyEquivalentModifierMask"/>
@@ -48,16 +55,28 @@
                         <action selector="startTimer:" target="458" id="9tM-GA-bgi"/>
                     </connections>
                 </menuItem>
-                <menuItem title="5:00" toolTip="Stop the countdown" id="rlq-dc-4hA">
+                <menuItem title="45:00" toolTip="Stop the countdown" id="QR4-qD-fYD">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="startTimer:" target="458" id="83F-Ce-YLA"/>
+                        <action selector="startTimer:" target="458" id="8be-E1-P6y"/>
                     </connections>
                 </menuItem>
                 <menuItem title="60:00" toolTip="Stop the countdown" id="Zwk-Ki-4qx">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="startTimer:" target="458" id="blK-6I-Uaj"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="5:00" toolTip="Stop the countdown" id="rlq-dc-4hA">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startTimer:" target="458" id="83F-Ce-YLA"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="2:00" toolTip="Stop the countdown" id="w44-nd-LgD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startTimer:" target="458" id="lr4-ai-bQ7"/>
                     </connections>
                 </menuItem>
                 <menuItem title="1:00" toolTip="Stop the countdown" id="0ch-W3-Boe">

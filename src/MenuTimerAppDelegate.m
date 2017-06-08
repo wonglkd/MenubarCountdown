@@ -85,6 +85,9 @@
     int seconds = time % 60;
 
     NSString* timeString = [NSString stringWithFormat:@"%@%d:%02d", prefix, minutes, seconds];
+    if (time == 0) {
+        timeString = @"0";
+    }
 
     return timeString;
 }
@@ -143,6 +146,16 @@
         self.canResume = YES;
     }
 }
+
+
+- (IBAction)resetTimer:(id)sender {
+    [self updateStatusItemTitle:0];
+    self.timerIsRunning = NO;
+    self.canResume = NO;
+    self.timerIsUp = YES;
+    [stopwatch reset];
+}
+
 
 
 - (IBAction)resumeTimer:(id)sender {
